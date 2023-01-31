@@ -36,10 +36,14 @@ def extract_answer_from_response(response):
     """
 
     # TODO what would happen if the response dictionary was not in the expected form?
+    #the test will fail
     # TODO can you modify this function to print an error message, and return None
     #   if the response dictionary is not in this structure? 
-    answer = response['answer']
+    
+    answer = response.get('answer')
     return answer
+    
+    
 
 
 if __name__ == '__main__':
